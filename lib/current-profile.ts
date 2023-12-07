@@ -3,18 +3,12 @@ import { auth, currentUser } from "@clerk/nextjs";
 import { db } from "@/lib/db";
 
 export const currentProfile = async () => {
-    const { userId } = auth();
     const user = await currentUser();
+    const { userId } = auth();
 
-    if (!userId) {
+    if (!user) {
         return null;
     }
-
-    const profile = await db.profile.findUnique({
-        where: {
-            userId
-        }
-    });
 
     const updatedProfile = await db.profile.update({
         where:{
@@ -27,9 +21,19 @@ export const currentProfile = async () => {
           },
         });
 
-    if (user) {
+    if (!userId) {
+        return null;
+    }
+
+    if (userId) {
         return updatedProfile;
     }
+
+    const profile = await db.profile.findUnique({
+        where: {
+            userId
+        }
+    });
 
     return profile;
 }
