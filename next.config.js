@@ -14,7 +14,6 @@ const nextConfig = {
             "utfs.io"
         ]
     },
-    output: "export",
 }
 
 module.exports = nextConfig
