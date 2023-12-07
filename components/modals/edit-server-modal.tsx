@@ -86,7 +86,7 @@ export const EditServerModal = () => {
                             Edit your Fuzzbox
                         </DialogTitle>
                         <DialogDescription className="text-center text-zinc-500">
-                            Didn't like your original settings? We gotcha, you can edit the icon and name that you set originally.
+                            Didn&apos;t like your original settings? We gotcha, you can edit the icon and name that you set originally.
                         </DialogDescription>
                     </DialogHeader>
                     <Form {...form}>

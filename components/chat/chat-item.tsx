@@ -185,7 +185,7 @@ export const ChatItem = ({
                                 </Button>
                             </form>
                             <span>
-                                Press escape to cancel, press enter to save. You can also save it as it's current state and nothing will change.
+                                Press escape to cancel, press enter to save. You can also save it as it&apos;s current state and nothing will change.
                             </span>
                         </Form>
                     )}
