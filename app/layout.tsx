@@ -21,7 +21,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider><html lang="en" suppressHydrationWarning>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <link
+      rel="icon"
+      href="../favicon.ico"
+         />
       <body className={cn(
         font.className,
         "bg-white dark:bg-[#313338]")
